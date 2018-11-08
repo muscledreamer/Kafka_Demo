@@ -1,28 +1,20 @@
-## Python Kafka客户端
-Welcome to Kafka_Demo~!
+## Welcome to Python Kafka Client Demo ~!
 ---
 
 ### 说明
 
-* 该项目在原生库基础上进行封装, 你会更优雅与简便的使用.
+* 该项目在原生库基础上进行`封装`, 你会更优雅与简便的使用.
 * `Kafka` Python客户端生态简述:
 
     1. 目前Kafka Python客户端共拥有三种第三方库:
     
-        kafka(推荐Consumer使用此库)
-        pykafka(推荐Producer使用此库)
-        confluent_kafka
+        [kafka(推荐Consumer使用此库)](https://github.com/dpkp/kafka-python) 
         
-    2. 企业级使用历史:
-    
-        2017年5月-2018年9月: kafka客户端-->线上使用
-        2018年9月起: pykafka客户端Bate-->测试使用
-
-
-
-
-
-
+        [pykafka(推荐Producer使用此库)](https://github.com/Parsely/pykafka)
+        
+        [confluent-kafka(Producer发送最快)](https://github.com/confluentinc/confluent-kafka-python)
+        
+    2. 待续
 
 
 
