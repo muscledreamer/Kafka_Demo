@@ -1,5 +1,4 @@
-## Welcome to 
-### Python Kafka Client Demo ~!
+## Welcome to Kafka PyClient Demo ~!
 
 ### 说明
 
