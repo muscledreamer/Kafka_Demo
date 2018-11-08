@@ -5,7 +5,7 @@
 * 该项目经性能比对测试, 基于原生库进行开发, 大家可以更快速地上手kafka操作.
 * `Kafka` Python客户端生态简述:
 
-    目前Kafka Python客户端共拥有三种第三方库:
+    1. 目前Kafka Python Client共有三种原生库:
     
         [kafka(推荐Consumer使用此库)](https://github.com/dpkp/kafka-python) 
         
