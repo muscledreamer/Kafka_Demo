@@ -3,29 +3,7 @@
 # @Author: JingQian Bo
 # @Create Time: 2018/9/27-下午3:46
 from pykafka import KafkaClient
-
-
-class KafkaTaskException(Exception):
-    """ Base Exception for KafkaTask """
-    pass
-
-
-class ParameterError(KafkaTaskException):
-    """ Error for Parameter Exception
-    _ParameterError_Key: You can see this Friendly Tips when error type for key.
-    _ParameterError_Topic: You can see this Friendly Tips when error type for topic.
-    _ParameterError_Consumer: You can see this Friendly Tips when use error Parameter to init init_consumer
-    """
-    _ParameterError_Key = "ParameterError- type(s) for 'Key': must be bytes"
-    _ParameterError_Topic = "ParameterError- type(s) for 'topic': must be bytes"
-    _ParameterError_pykafka_Consumer = "ParameterError- type(s) for 'topic': must be bytes; " \
-                                       "type(s) for 'group_id': must be str; 'offset_type' " \
-                                       "must be 'LATEST' or 'EARLIEST'"
-    _ParameterError_kafka_Consumer = "ParameterError- type(s) for 'topic': must be str; " \
-                                     "type(s) for 'group_id': must be str; 'offset_type' " \
-                                     "must be 'LATEST' or 'EARLIEST'"
-
-    pass
+from exceptions import *
 
 
 class KafkaTask(object):

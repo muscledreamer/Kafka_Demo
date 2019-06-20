@@ -3,6 +3,7 @@
 # @Author: JingQian Bo
 # @Create Time: 2018/9/27-下午3:46
 import time
+from exceptions import KafkaTaskException
 from kafka_client import KafkaTask
 from conf import demo_Sever, demo_Topic, demo_GroupID
 
@@ -13,7 +14,7 @@ def get_data_by_pykafka():
     kafka_client.init_consumer_pykafka(topic=demo_Topic, group_id=demo_GroupID,
                                        offset_type="EARLIEST")  # 'offset_type' must be 'LATEST' or 'EARLIEST'
     for msg in kafka_client.consumer:
-        print("偏移量:{}, Partition-Key:{}, 接收值:{}".format(msg.offset, msg.partition_key, msg.value))
+        print("Offset:{}, Partition-Key:{}, Copy:{}".format(msg.offset, msg.partition_key, msg.value))
 
 
 # kafka-python接收数据
@@ -24,8 +25,8 @@ def get_data_by_kafka():
     while True:
         try:
             msgs = kafka_client.pull()
-        except:
-            print('Get kafka msg Error')
+        except KafkaTaskException as e:
+            print(e)
             kafka_client.init_consumer_pykafka(topic=demo_Topic.decode(), group_id=demo_GroupID,
                                                offset_type="EARLIEST")  # 'offset_type' must be 'LATEST' or 'EARLIEST'
             time.sleep(1)  # 客户端容错
